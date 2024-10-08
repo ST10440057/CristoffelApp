@@ -179,13 +179,13 @@ function AddItem({ navigation }: ScreenProps<'AddItem'>) {
       <TouchableOpacity style={styles.confirmButton} onPress={saveItem}>
         <Text style={styles.confirmButtonText}>Save</Text>
       </TouchableOpacity>
-      
+      //calc for the total cost 
       <Text>Dish List:</Text>
       {dishList.map((item, index) => (
         <Text key={index}>{item.name} - Course: {item.course} - Description: {item.description} - Price: {item.price}</Text>
       ))}
 
-add total code
+
 
     </View>
   );
