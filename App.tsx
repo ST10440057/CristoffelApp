@@ -152,6 +152,7 @@ function AddItem({ navigation }: ScreenProps<'AddItem'>) {
   };
 
   return (
+    <ScrollView>
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Add Menu Item</Text>
       <Text style={styles.h2}>Course:</Text>
@@ -180,14 +181,15 @@ function AddItem({ navigation }: ScreenProps<'AddItem'>) {
         <Text style={styles.confirmButtonText}>Save</Text>
       </TouchableOpacity>
       
-      <Text>Dish List:</Text>
+      <Text style = {styles.h2}>/Text>Dish List:</Text>
       {dishList.map((item, index) => (
         <Text key={index}>{item.name} - Course: {item.course} - Description: {item.description} - Price: {item.price}</Text>
       ))}
 
-add total code
+<Text style = {styles.h2}>Total :{totalCost.toString()}</Text>
 
     </View>
+      </ScrollView>
   );
 }
 
